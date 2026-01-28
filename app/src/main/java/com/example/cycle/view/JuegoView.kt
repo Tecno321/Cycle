@@ -61,6 +61,12 @@ fun PantallaCatalogoJuegos(alCerrarSesion: () -> Unit, alClickJuego: (Juego) -> 
                 IconButton(onClick = alCerrarSesion) { Icon(Icons.AutoMirrored.Filled.ExitToApp, "Salir") }
             }
         }
+
+        SeccionNoticiasSteam()
+
+        Spacer(modifier = Modifier.height(8.dp))
+        Text("Catálogo de Arriendo", modifier = Modifier.padding(horizontal = 16.dp), fontWeight = FontWeight.SemiBold, fontSize = 18.sp)
+
         LazyVerticalGrid(columns = GridCells.Fixed(2), contentPadding = PaddingValues(12.dp), modifier = Modifier.weight(1f)) {
             items(juegos) { juego ->
                 Card(modifier = Modifier.padding(4.dp), onClick = { alClickJuego(juego) }) {
@@ -80,6 +86,7 @@ fun PantallaCatalogoJuegos(alCerrarSesion: () -> Unit, alClickJuego: (Juego) -> 
         }
     }
 }
+
 @Composable
 fun PantallaDetalleJuego(juego: Juego, alVolver: () -> Unit, alConfirmarReserva: (Juego) -> Unit) {
     Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {

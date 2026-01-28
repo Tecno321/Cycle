@@ -7,7 +7,6 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-// Funciones para SharedPreferences (Mantenidas por compatibilidad o uso rápido)
 fun guardarCredenciales(contexto: Context, usuario: String, email: String, contrasena: String) {
     val preferencias = contexto.getSharedPreferences("auth_prefs", Context.MODE_PRIVATE)
     preferencias.edit()

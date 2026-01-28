@@ -54,7 +54,8 @@ fun AplicacionCycle() {
                     alCerrarSesion = { sesionIniciada = false
                         usuarioLogeado = null
                         vistaActual = "CATALOGO" },
-                    arriendosTotales = historialArriendos.size
+                    arriendosTotales = historialArriendos.size,
+                    onUsuarioActualizado = { usuarioLogeado = it } // Sincronizamos el estado global
                 )
                 "MIS_ARRIENDOS" -> PantallaMisArriendos(
                     historial = historialArriendos,

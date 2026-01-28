@@ -49,6 +49,10 @@ dependencies {
     implementation(libs.androidx.compose.material3.adaptive.navigation.suite)
     implementation(libs.coil.compose)
 
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+
     // Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
